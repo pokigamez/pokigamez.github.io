@@ -28,9 +28,16 @@
         * {margin: 0;padding: 0;box-sizing: border-box;}
         body {font-family: 'Open Sans', sans-serif;line-height: 1.6;color: var(--dark-text);background: var(--dark-bg);min-height: 100vh;}
         .container {width: 100%;max-width: 1200px;margin: 0 auto;padding: 0 15px;}
-        header {background: linear-gradient(to right, var(--primary), var(--secondary));color: white;padding: 0.8rem 0;box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);position: sticky;top: 0;z-index: 100;}
-        .header-content {display: flex;justify-content: space-between;align-items: center;}
-        .logo {font-family: 'Montserrat', sans-serif;font-weight: 700;font-size: 1.8rem;display: flex;align-items: center;gap: 0.5rem;text-decoration: none;color: white;}
+        header {background: linear-gradient(to right, var(--primary), var(--secondary));color: white;padding: 0.8rem 0;box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);position: sticky;top: 0;z-index: 100; transition: transform 0.3s ease-in-out;}
+        .header-hidden {transform: translateY(-100%);}
+        .header-content {display: flex;justify-content: space-between;align-items: center; flex-wrap: wrap;}
+        .logo {font-family: 'Montserrat', sans-serif;font-weight: 700;font-size: 1.8rem;display: flex;align-items: center;gap: 0.5rem;text-decoration: none;color: white; transition: transform 0.3s ease;}
+        .logo:hover {transform: scale(1.05); animation: pulse-glow 1.5s infinite;}
+        .main-nav {order: 1; width: 100%; margin-top: 10px;}
+        .nav-toggle {display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; padding: 0.5rem;}
+        .main-nav ul {list-style: none; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 0.5rem; background-color: rgba(0,0,0,0.25); padding: 0.75rem; border-radius: 50px; border: 1px solid var(--dark-border); box-shadow: 0 2px 5px rgba(0,0,0,0.2) inset;}
+        .main-nav a {color: white; text-decoration: none; padding: 0.5rem 1rem; border-radius: 50px; transition: background-color 0.3s, transform 0.2s; font-weight: 600; font-size: 0.9rem;}
+        .main-nav a:hover {background-color: var(--accent); transform: translateY(-2px);}
         .search-bar {display: flex;margin: 0 1rem;}
         .search-bar input {padding: 0.5rem 1rem;border: none;border-radius: 50px 0 0 50px;outline: none;background: rgba(255, 255, 255, 0.9);}
         .search-bar button {background: var(--accent);color: white;border: none;padding: 0.5rem 1rem;border-radius: 0 50px 50px 0;cursor: pointer;}
@@ -53,6 +60,17 @@
         .footer-links a {color: #a0a0a8;text-decoration: none;transition: color 0.3s;}
         .footer-links a:hover {color: white;}
         .analytics-counter {margin-top: 1rem;}
+        #scrollToTopBtn {position: fixed; bottom: 20px; right: 30px; z-index: 99; font-size: 18px; border: none; outline: none; background-color: var(--accent); color: white; cursor: pointer; border-radius: 50%; width: 50px; height: 50px; transition: opacity 0.3s, transform 0.3s, visibility 0.3s; opacity: 0; visibility: hidden; display: flex; align-items: center; justify-content: center;}
+        #scrollToTopBtn.show {opacity: 1; visibility: visible;}
+        #scrollToTopBtn:hover {background-color: #ff5e9a; transform: scale(1.1);}
+        @keyframes pulse-glow { 0%, 100% { text-shadow: 0 0 5px rgba(255, 64, 129, 0.7); } 50% { text-shadow: 0 0 20px rgba(255, 64, 129, 1); } }
+        @media (max-width: 992px) {
+            .nav-toggle {display: block; position: absolute; top: 10px; right: 15px;}
+            .header-content .search-bar { margin: 0.5rem auto; }
+            .main-nav ul { display: none; flex-direction: column; width: 100%; background: var(--secondary); padding: 1rem 0; gap: 1rem; margin-top: 0; border-radius: 10px; border: none; box-shadow: none;}
+            .main-nav ul.active { display: flex; }
+            .logo { flex-basis: 100%; text-align: center; justify-content: center;}
+        }
     </style>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7305083056611385" crossorigin="anonymous"></script>
 </head>
@@ -62,6 +80,34 @@
             <a href="/" class="logo">
                 Poki Games
             </a>
+            <nav class="main-nav">
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul id="navMenu">
+                    
+                        <li><a href="/category/adventure">🗺️ Adventure</a></li>
+                    
+                        <li><a href="/category/horror">👻 Horror</a></li>
+                    
+                        <li><a href="/category/action">💥 Action</a></li>
+                    
+                        <li><a href="/category/platformer">🏃 Platformer</a></li>
+                    
+                        <li><a href="/category/multiplayer">🌐 Multiplayer</a></li>
+                    
+                        <li><a href="/category/puzzle">🧠 Puzzle</a></li>
+                    
+                        <li><a href="/category/clicker">🖱️ Clicker</a></li>
+                    
+                        <li><a href="/category/driving">🚗 Driving</a></li>
+                    
+                        <li><a href="/category/fighting">🥊 Fighting</a></li>
+                    
+                        <li><a href="/category/kids">🎨 Kids</a></li>
+                    
+                </ul>
+            </nav>
             <div class="search-bar">
                 <input type="text" placeholder="Search games...">
                 <button>Search</button>
@@ -108,8 +154,44 @@
         </div>
     </footer>
 
+    <a href="#" id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></a>
+
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.getElementById('navToggle');
+            const navMenu = document.getElementById('navMenu');
+            if (navToggle) {
+                navToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                });
+            }
+
+            const header = document.querySelector('header');
+            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+            let lastScrollTop = 0;
+
+            window.addEventListener('scroll', function() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop && scrollTop > header.offsetHeight) {
+                    header.classList.add('header-hidden');
+                } else {
+                    header.classList.remove('header-hidden');
+                }
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    scrollToTopBtn.classList.add('show');
+                } else {
+                    scrollToTopBtn.classList.remove('show');
+                }
+            });
+
+            scrollToTopBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            });
+        });
     </script>
 </body>
 </html>
