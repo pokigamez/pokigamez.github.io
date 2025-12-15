@@ -2365,58 +2365,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pokigamez.github.io/category/puzzle</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pokigamez.github.io/category/puzzle-page-2</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pokigamez.github.io/category/puzzle-page-3</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pokigamez.github.io/category/puzzle-page-4</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pokigamez.github.io/category/racing</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pokigamez.github.io/category/racing-page-2</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pokigamez.github.io/category/2-player</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pokigamez.github.io/category/2-player-page-2</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pokigamez.github.io/category/fighting</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pokigamez.github.io/category/simulation</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pokigamez.github.io/category/simulation-page-2</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pokigamez.github.io/category/strategy</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pokigamez.github.io/category/strategy-page-2</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://pokigamez.github.io/category/shooter</loc>
     <priority>0.9</priority>
   </url>
@@ -2425,63 +2373,19 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pokigamez.github.io/category/driving</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pokigamez.github.io/category/driving-page-2</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pokigamez.github.io/category/driving-page-3</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pokigamez.github.io/category/horror</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pokigamez.github.io/category/sports</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pokigamez.github.io/category/sports-page-2</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://pokigamez.github.io/category/kids</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pokigamez.github.io/category/platformer</loc>
+    <loc>https://pokigamez.github.io/category/clicker</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pokigamez.github.io/category/platformer-page-2</loc>
+    <loc>https://pokigamez.github.io/category/racing</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pokigamez.github.io/category/skill</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pokigamez.github.io/category/skill-page-2</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pokigamez.github.io/category/skill-page-3</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pokigamez.github.io/category/skill-page-4</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pokigamez.github.io/category/skill-page-5</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pokigamez.github.io/category/skill-page-6</loc>
+    <loc>https://pokigamez.github.io/category/racing-page-2</loc>
     <priority>0.9</priority>
   </url>
   <url>
@@ -2509,7 +2413,103 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pokigamez.github.io/category/clicker</loc>
+    <loc>https://pokigamez.github.io/category/fighting</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pokigamez.github.io/category/strategy</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pokigamez.github.io/category/strategy-page-2</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pokigamez.github.io/category/puzzle</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pokigamez.github.io/category/puzzle-page-2</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pokigamez.github.io/category/puzzle-page-3</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pokigamez.github.io/category/puzzle-page-4</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pokigamez.github.io/category/horror</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pokigamez.github.io/category/multiplayer</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pokigamez.github.io/category/multiplayer-page-2</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pokigamez.github.io/category/platformer</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pokigamez.github.io/category/platformer-page-2</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pokigamez.github.io/category/2-player</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pokigamez.github.io/category/2-player-page-2</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pokigamez.github.io/category/skill</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pokigamez.github.io/category/skill-page-2</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pokigamez.github.io/category/skill-page-3</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pokigamez.github.io/category/skill-page-4</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pokigamez.github.io/category/skill-page-5</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pokigamez.github.io/category/skill-page-6</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pokigamez.github.io/category/sports</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pokigamez.github.io/category/sports-page-2</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pokigamez.github.io/category/driving</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pokigamez.github.io/category/driving-page-2</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pokigamez.github.io/category/driving-page-3</loc>
     <priority>0.9</priority>
   </url>
   <url>
@@ -2521,11 +2521,11 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pokigamez.github.io/category/multiplayer</loc>
+    <loc>https://pokigamez.github.io/category/simulation</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pokigamez.github.io/category/multiplayer-page-2</loc>
+    <loc>https://pokigamez.github.io/category/simulation-page-2</loc>
     <priority>0.9</priority>
   </url>
 </urlset>
