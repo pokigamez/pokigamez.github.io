@@ -103,12 +103,17 @@
         .banner-icon { font-size: 45px; color: #FFD700; text-shadow: 0 0 15px rgba(255, 215, 0, 0.4); }
         .banner-text h4 { color: white; margin-bottom: 8px; font-family: 'Montserrat', sans-serif; font-size: 24px; }
         .banner-text p { color: var(--dark-text); font-size: 16px; margin: 0; max-width: 500px; line-height: 1.5; }
-        .close-banner { position: absolute; top: 15px; right: 20px; background: none; border: none; color: #aaa; font-size: 28px; cursor: pointer; transition: color 0.2s; padding: 0; line-height: 1; }
-        .close-banner:hover { color: var(--danger); }
+        
+        /* Измененные стили для крестика (менее заметный) */
+        .close-banner { position: absolute; top: 10px; right: 15px; background: transparent; border: none; color: #777; font-size: 14px; font-family: 'Montserrat', sans-serif; cursor: pointer; transition: color 0.2s; display: none; align-items: center; justify-content: center; padding: 5px; z-index: 21; }
+        .close-banner:not(:disabled):hover { color: #ccc; /* Слегка светлее при наведении, не красный */ }
+        .close-banner:disabled { cursor: not-allowed; color: #555; /* Темнее во время ожидания */ }
+        .close-banner.ready { font-size: 24px; /* Увеличенный размер только для иконки */ }
+
         .redirect-btn { margin-top: 10px; background: var(--accent); color: white; padding: 14px 35px; border-radius: 50px; font-weight: 800; font-size: 16px; text-transform: uppercase; text-decoration: none; transition: transform 0.2s, background-color 0.2s; white-space: nowrap; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
         .redirect-btn:hover { transform: scale(1.05); background-color: #ff5e9a; }
 
-        .star-rating-container {background: var(--dark-card);padding: 1rem 1.5rem;border-radius: 10px;margin-bottom: 1.5rem;text-align: center;border: 1px solid var(--dark-border);}
+        .star-rating-container {background: var(--dark-card);padding: 1rem 1.5rem;border-radius: 10px;margin: 1.5rem 0;text-align: center;border: 1px solid var(--dark-border);}
         .star-rating-container h3 {font-family: 'Montserrat', sans-serif;color: var(--primary);margin-bottom: 0.8rem;font-size: 1.2rem;}
         .stars {font-size: 2rem;color: #ccc;margin-bottom: 0.5rem;}
         .stars span {cursor: pointer;transition: color 0.2s;}
@@ -216,39 +221,39 @@
          </button>
                 <ul id="navMenu">
                     
-                        <li><a href="/category/driving">🏎️ Driving</a></li>
+                        <li><a href="/category/simulation">🏗️ Simulation</a></li>
                     
-                        <li><a href="/category/puzzle">🧩 Puzzle</a></li>
+                        <li><a href="/category/clicker">🖱️ Clicker</a></li>
+                    
+                        <li><a href="/category/fighting">🥊 Fighting</a></li>
+                    
+                        <li><a href="/category/strategy">♟️ Strategy</a></li>
+                    
+                        <li><a href="/category/racing">🏁 Racing</a></li>
                     
                         <li><a href="/category/sports">⚽ Sports</a></li>
                     
                         <li><a href="/category/2-player">👥 2-Player</a></li>
                     
-                        <li><a href="/category/horror">👻 Horror</a></li>
-                    
                         <li><a href="/category/platformer">🏃 Platformer</a></li>
                     
-                        <li><a href="/category/strategy">♟️ Strategy</a></li>
-                    
-                        <li><a href="/category/action">💥 Action</a></li>
+                        <li><a href="/category/horror">👻 Horror</a></li>
                     
                         <li><a href="/category/skill">🏆 Skill</a></li>
                     
-                        <li><a href="/category/fighting">🥊 Fighting</a></li>
-                    
-                        <li><a href="/category/kids">🧸 Kids</a></li>
-                    
-                        <li><a href="/category/simulation">🏗️ Simulation</a></li>
-                    
-                        <li><a href="/category/adventure">🗺️ Adventure</a></li>
-                    
-                        <li><a href="/category/clicker">🖱️ Clicker</a></li>
+                        <li><a href="/category/driving">🏎️ Driving</a></li>
                     
                         <li><a href="/category/multiplayer">🌎 Multiplayer</a></li>
                     
+                        <li><a href="/category/kids">🧸 Kids</a></li>
+                    
+                        <li><a href="/category/puzzle">🧩 Puzzle</a></li>
+                    
                         <li><a href="/category/shooter">🎯 Shooter</a></li>
                     
-                        <li><a href="/category/racing">🏁 Racing</a></li>
+                        <li><a href="/category/action">💥 Action</a></li>
+                    
+                        <li><a href="/category/adventure">🗺️ Adventure</a></li>
                     
                 </ul>
             </nav>
@@ -263,7 +268,7 @@
     <div class="container">
         
 
-        <div class="game-header" style="background-color: #ffab91;">
+        <div class="game-header" style="background-color: #9fa8da;">
             <h1>Kart Wars</h1>
             <p>Jump into the chaotic arena of Kart Wars Unblocked. This is a fast-paced, .io-style multiplayer game that combines racing with vehicular combat. You're in a free-for-all arena, and your goal is to be the last kart standing. Drive around, collect flags to get stronger, and grab powerful weapons like rockets and machine guns. You can also pick up shields and boosts to outmaneuver your opponents. This unblocked game is pure, explosive, competitive fun. It's a high-octane battle for survival.</p>
         </div>
@@ -298,7 +303,7 @@
                 </button>
                 
                 <div id="bottom-banner" class="bottom-banner">
-                    <button id="closeBanner" class="close-banner"><i class="fas fa-times"></i></button>
+                    <button id="closeBanner" class="close-banner"></button>
                     <div class="banner-content">
                         <i class="fas fa-crown banner-icon"></i>
                         <div class="banner-text">
@@ -321,24 +326,24 @@
                     
                     
                         
-                            <a href="/category/action" class="category-tag-item" style="background-color: #FF3D00;">
-                                💥 Action
+                            <a href="/category/shooter" class="category-tag-item" style="background-color: #6D4C41;">
+                                🎯 Shooter
                             </a>
                         
-                            <a href="/category/multiplayer" class="category-tag-item" style="background-color: #4CAF50;">
-                                🌎 Multiplayer
+                            <a href="/category/action" class="category-tag-item" style="background-color: #FF3D00;">
+                                💥 Action
                             </a>
                         
                             <a href="/category/driving" class="category-tag-item" style="background-color: #C2185B;">
                                 🏎️ Driving
                             </a>
                         
-                            <a href="/category/shooter" class="category-tag-item" style="background-color: #6D4C41;">
-                                🎯 Shooter
-                            </a>
-                        
                             <a href="/category/racing" class="category-tag-item" style="background-color: #F44336;">
                                 🏁 Racing
+                            </a>
+                        
+                            <a href="/category/multiplayer" class="category-tag-item" style="background-color: #4CAF50;">
+                                🌎 Multiplayer
                             </a>
                         
                     
@@ -372,56 +377,23 @@
             <div class="games-grid">
               
                     <div class="game-card">
-                        <a href="/adventure-drivers" class="game-link">
+                        <a href="/evo-city-driving" class="game-link">
                          <div class="game-image">
-                                <img src="https://pokigamez.github.io/images/adventure-drivers.png" alt="Adventure Drivers">
+                                <img src="https://pokigamez.github.io/images/evo-city-driving.png" alt="Evo City Driving">
                            </div>
                         <div class="game-info">
-                                <h3 class="game-title">Adventure Drivers</h3>
+                                <h3 class="game-title">Evo City Driving</h3>
                             </div>
                         </a>
               </div>
                 
                     <div class="game-card">
-                        <a href="/real-cars-in-city" class="game-link">
+                        <a href="/rowdy-city-wrestling" class="game-link">
                          <div class="game-image">
-                                <img src="https://pokigamez.github.io/images/real-cars-in-city.png" alt="Real Cars In City">
+                                <img src="https://pokigamez.github.io/images/rowdy-city-wrestling.png" alt="Rowdy City Wrestling">
                            </div>
                         <div class="game-info">
-                                <h3 class="game-title">Real Cars In City</h3>
-                            </div>
-                        </a>
-              </div>
-                
-                    <div class="game-card">
-                        <a href="/gun-mayhem-2" class="game-link">
-                         <div class="game-image">
-                                <img src="https://pokigamez.github.io/images/gun-mayhem-2.png" alt="Gun Mayhem 2">
-                           </div>
-                        <div class="game-info">
-                                <h3 class="game-title">Gun Mayhem 2</h3>
-                            </div>
-                        </a>
-              </div>
-                
-                    <div class="game-card">
-                        <a href="/pixel-gun-survival" class="game-link">
-                         <div class="game-image">
-                                <img src="https://pokigamez.github.io/images/pixel-gun-survival.png" alt="Pixel Gun Survival">
-                           </div>
-                        <div class="game-info">
-                                <h3 class="game-title">Pixel Gun Survival</h3>
-                            </div>
-                        </a>
-              </div>
-                
-                    <div class="game-card">
-                        <a href="/snakes-and-ladders" class="game-link">
-                         <div class="game-image">
-                                <img src="https://pokigamez.github.io/images/snakes-and-ladders.png" alt="Snakes And Ladders">
-                           </div>
-                        <div class="game-info">
-                                <h3 class="game-title">Snakes And Ladders</h3>
+                                <h3 class="game-title">Rowdy City Wrestling</h3>
                             </div>
                         </a>
               </div>
@@ -438,67 +410,100 @@
               </div>
                 
                     <div class="game-card">
-                        <a href="/extreme-car-parking" class="game-link">
+                        <a href="/curve-ball-3d" class="game-link">
                          <div class="game-image">
-                                <img src="https://pokigamez.github.io/images/extreme-car-parking.png" alt="Extreme Car Parking">
+                                <img src="https://pokigamez.github.io/images/curve-ball-3d.png" alt="Curve Ball 3D">
                            </div>
                         <div class="game-info">
-                                <h3 class="game-title">Extreme Car Parking</h3>
+                                <h3 class="game-title">Curve Ball 3D</h3>
                             </div>
                         </a>
               </div>
                 
                     <div class="game-card">
-                        <a href="/tetris-99" class="game-link">
+                        <a href="/moto-trial-racing-2" class="game-link">
                          <div class="game-image">
-                                <img src="https://pokigamez.github.io/images/tetris-99.png" alt="Tetris 99">
+                                <img src="https://pokigamez.github.io/images/moto-trial-racing-2.png" alt="Moto Trial Racing 2">
                            </div>
                         <div class="game-info">
-                                <h3 class="game-title">Tetris 99</h3>
+                                <h3 class="game-title">Moto Trial Racing 2</h3>
                             </div>
                         </a>
               </div>
                 
                     <div class="game-card">
-                        <a href="/descent" class="game-link">
+                        <a href="/stickman-warriors" class="game-link">
                          <div class="game-image">
-                                <img src="https://pokigamez.github.io/images/descent.png" alt="Descent">
+                                <img src="https://pokigamez.github.io/images/stickman-warriors.png" alt="Stickman Warriors">
                            </div>
                         <div class="game-info">
-                                <h3 class="game-title">Descent</h3>
+                                <h3 class="game-title">Stickman Warriors</h3>
                             </div>
                         </a>
               </div>
                 
                     <div class="game-card">
-                        <a href="/fancy-pants-3" class="game-link">
+                        <a href="/google-snake" class="game-link">
                          <div class="game-image">
-                                <img src="https://pokigamez.github.io/images/fancy-pants-3.png" alt="Fancy Pants 3">
+                                <img src="https://pokigamez.github.io/images/google-snake.png" alt="Google Snake">
                            </div>
                         <div class="game-info">
-                                <h3 class="game-title">Fancy Pants 3</h3>
+                                <h3 class="game-title">Google Snake</h3>
                             </div>
                         </a>
               </div>
                 
                     <div class="game-card">
-                        <a href="/shortcut-race" class="game-link">
+                        <a href="/retro-highway" class="game-link">
                          <div class="game-image">
-                                <img src="https://pokigamez.github.io/images/shortcut-race.png" alt="Shortcut Race">
+                                <img src="https://pokigamez.github.io/images/retro-highway.png" alt="Retro Highway">
                            </div>
                         <div class="game-info">
-                                <h3 class="game-title">Shortcut Race</h3>
+                                <h3 class="game-title">Retro Highway</h3>
                             </div>
                         </a>
               </div>
                 
                     <div class="game-card">
-                        <a href="/skiing-fred" class="game-link">
+                        <a href="/cave-blast" class="game-link">
                          <div class="game-image">
-                                <img src="https://pokigamez.github.io/images/skiing-fred.png" alt="Skiing Fred">
+                                <img src="https://pokigamez.github.io/images/cave-blast.png" alt="Cave Blast">
                            </div>
                         <div class="game-info">
-                                <h3 class="game-title">Skiing Fred</h3>
+                                <h3 class="game-title">Cave Blast</h3>
+                            </div>
+                        </a>
+              </div>
+                
+                    <div class="game-card">
+                        <a href="/4x4-drive-offroad" class="game-link">
+                         <div class="game-image">
+                                <img src="https://pokigamez.github.io/images/4x4-drive-offroad.png" alt="4x4 Drive Offroad">
+                           </div>
+                        <div class="game-info">
+                                <h3 class="game-title">4x4 Drive Offroad</h3>
+                            </div>
+                        </a>
+              </div>
+                
+                    <div class="game-card">
+                        <a href="/stickman-parkour-3" class="game-link">
+                         <div class="game-image">
+                                <img src="https://pokigamez.github.io/images/stickman-parkour-3.png" alt="Stickman Parkour 3">
+                           </div>
+                        <div class="game-info">
+                                <h3 class="game-title">Stickman Parkour 3</h3>
+                            </div>
+                        </a>
+              </div>
+                
+                    <div class="game-card">
+                        <a href="/car-rush" class="game-link">
+                         <div class="game-image">
+                                <img src="https://pokigamez.github.io/images/car-rush.png" alt="Car Rush">
+                           </div>
+                        <div class="game-info">
+                                <h3 class="game-title">Car Rush</h3>
                             </div>
                         </a>
               </div>
@@ -510,39 +515,39 @@
             <h2 class="categories-title">Popular Categories</h2>
             <div class="category-grid">
                 
-    <a href="/category/adventure" class="category-item" style="background-color: #00897B;">🗺️ Adventure</a>
-                
-    <a href="/category/action" class="category-item" style="background-color: #FF3D00;">💥 Action</a>
-                
-    <a href="/category/strategy" class="category-item" style="background-color: #546E7A;">♟️ Strategy</a>
-                
     <a href="/category/clicker" class="category-item" style="background-color: #FBC02D;">🖱️ Clicker</a>
-                
-    <a href="/category/kids" class="category-item" style="background-color: #03A9F4;">🧸 Kids</a>
-                
-    <a href="/category/sports" class="category-item" style="background-color: #43A047;">⚽ Sports</a>
-                
-    <a href="/category/simulation" class="category-item" style="background-color: #607D8B;">🏗️ Simulation</a>
-                
-    <a href="/category/multiplayer" class="category-item" style="background-color: #4CAF50;">🌎 Multiplayer</a>
-                
-    <a href="/category/platformer" class="category-item" style="background-color: #FF9800;">🏃 Platformer</a>
-                
-    <a href="/category/skill" class="category-item" style="background-color: #FFC107;">🏆 Skill</a>
-                
-    <a href="/category/driving" class="category-item" style="background-color: #C2185B;">🏎️ Driving</a>
-                
-    <a href="/category/puzzle" class="category-item" style="background-color: #7B1FA2;">🧩 Puzzle</a>
-                
-    <a href="/category/2-player" class="category-item" style="background-color: #7E57C2;">👥 2-Player</a>
-                
-    <a href="/category/fighting" class="category-item" style="background-color: #D32F2F;">🥊 Fighting</a>
                 
     <a href="/category/shooter" class="category-item" style="background-color: #6D4C41;">🎯 Shooter</a>
                 
-    <a href="/category/horror" class="category-item" style="background-color: #37474F;">👻 Horror</a>
+    <a href="/category/strategy" class="category-item" style="background-color: #546E7A;">♟️ Strategy</a>
+                
+    <a href="/category/platformer" class="category-item" style="background-color: #FF9800;">🏃 Platformer</a>
+                
+    <a href="/category/puzzle" class="category-item" style="background-color: #7B1FA2;">🧩 Puzzle</a>
+                
+    <a href="/category/kids" class="category-item" style="background-color: #03A9F4;">🧸 Kids</a>
+                
+    <a href="/category/action" class="category-item" style="background-color: #FF3D00;">💥 Action</a>
+                
+    <a href="/category/sports" class="category-item" style="background-color: #43A047;">⚽ Sports</a>
+                
+    <a href="/category/driving" class="category-item" style="background-color: #C2185B;">🏎️ Driving</a>
+                
+    <a href="/category/2-player" class="category-item" style="background-color: #7E57C2;">👥 2-Player</a>
+                
+    <a href="/category/skill" class="category-item" style="background-color: #FFC107;">🏆 Skill</a>
+                
+    <a href="/category/adventure" class="category-item" style="background-color: #00897B;">🗺️ Adventure</a>
                 
     <a href="/category/racing" class="category-item" style="background-color: #F44336;">🏁 Racing</a>
+                
+    <a href="/category/simulation" class="category-item" style="background-color: #607D8B;">🏗️ Simulation</a>
+                
+    <a href="/category/fighting" class="category-item" style="background-color: #D32F2F;">🥊 Fighting</a>
+                
+    <a href="/category/multiplayer" class="category-item" style="background-color: #4CAF50;">🌎 Multiplayer</a>
+                
+    <a href="/category/horror" class="category-item" style="background-color: #37474F;">👻 Horror</a>
                 
             </div>
         </div>
@@ -649,6 +654,26 @@
                             redirectBtn.href = mainDomain + "/" + gId + "/";
                             redirectBtn.innerText = "Play on " + mainDomain.replace('https://', '');
                             bottomBanner.classList.add('active');
+                            
+                            if (closeBanner) {
+                                closeBanner.style.display = 'flex';
+                                closeBanner.disabled = true;
+                                closeBanner.classList.remove('ready');
+                                let timeLeft = 10;
+                                closeBanner.innerText = "Close in " + timeLeft + "s";
+                                
+                                const timerInterval = setInterval(() => {
+                                    timeLeft--;
+                                    if (timeLeft <= 0) {
+                                        clearInterval(timerInterval);
+                                        closeBanner.disabled = false;
+                                        closeBanner.classList.add('ready');
+                                        closeBanner.innerHTML = '<i class="fas fa-times"></i>';
+                                    } else {
+                                        closeBanner.innerText = "Close in " + timeLeft + "s";
+                                    }
+                                }, 1000);
+                            }
                         }
                     }, 10000);
                 });
@@ -656,8 +681,10 @@
 
             if (closeBanner && bottomBanner) {
                 closeBanner.addEventListener('click', function() {
-                    bottomBanner.classList.remove('active');
-                    setTimeout(() => { bottomBanner.style.display = 'none'; }, 500);
+                    if (!this.disabled) {
+                        bottomBanner.classList.remove('active');
+                        setTimeout(() => { bottomBanner.style.display = 'none'; }, 500);
+                    }
                 });
             }
 
